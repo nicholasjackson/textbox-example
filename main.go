@@ -55,14 +55,11 @@ func getTweets() []twitter.Tweet {
 	client := twitter.NewClient(httpClient)
 
 	// Home Timeline
-	tweets, _, err := client.Timelines.HomeTimeline(
+	tweets, _, _ := client.Timelines.HomeTimeline(
 		&twitter.HomeTimelineParams{
 			Count: 20,
 		},
 	)
-	if err != nil {
-		fmt.Println(err)
-	}
 
 	return tweets
 }

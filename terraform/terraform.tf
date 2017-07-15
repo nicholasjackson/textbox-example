@@ -1,7 +1,7 @@
 variable "mb_key" {}
 
 module "machinebox" {
-  source = "/Users/nicj/Developer/terraform/terraform-modules/elasticbeanstalk-docker"
+  source = "github.com/nicholasjackson/terraform-modules/elasticbeanstalk-docker"
 
   instance_type = "m4.4xlarge"
 
